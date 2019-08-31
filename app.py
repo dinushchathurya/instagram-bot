@@ -15,6 +15,10 @@ class InstagramBot():
     driver = self.driver
     driver.get("https://www.instagram.com/")
     time.sleep(2)
+    login_button =driver.find_element_by_xpath("//a[a@href'accounts/login']")
+    login_button.click()
+    time.sleep(2)
+    
 
 andreyIG = InstagramBot("username","password")
 andreyIG.login()
